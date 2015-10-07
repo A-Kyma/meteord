@@ -20,13 +20,13 @@ else
   exit 1
 fi
 
-if [[ $REBULD_NPM_MODULES ]]; then
+if [[ $REBUILD_NPM_MODULES ]]; then
   if [ -f /opt/meteord/rebuild_npm_modules.sh ]; then
     cd programs/server
     bash /opt/meteord/rebuild_npm_modules.sh
     cd ../../
   else
-    echo "=> Use meteorhacks/meteord:bin-build for binary bulding."
+    echo "=> Use meteorhacks/meteord:bin-build for binary building."
     exit 1
   fi
 fi
@@ -41,4 +41,4 @@ fi
 export PORT=${PORT:-80}
 
 echo "=> Starting meteor app on port:$PORT"
-node main.js
+forever -w main.js
