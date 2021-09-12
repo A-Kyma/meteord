@@ -1,5 +1,9 @@
-FROM meteorhacks/meteord:base
-MAINTAINER MeteorHacks Pvt Ltd.
+FROM akyma/meteord:base
+MAINTAINER A-Kyma srl.
+
+ARG NODE_VERSION
+ENV NODE_VERSION ${NODE_VERSION:-14.17.5}
+ONBUILD ENV NODE_VERSION ${NODE_VERSION:-14.17.5}
 
 ONBUILD RUN bash $METEORD_DIR/lib/install_meteor.sh
 ONBUILD COPY ./ /app

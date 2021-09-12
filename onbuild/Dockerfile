@@ -1,5 +1,12 @@
-FROM meteorhacks/meteord:base
-MAINTAINER MeteorHacks Pvt Ltd.
+FROM akyma/meteord:base
+MAINTAINER A-Kyma srl.
+
+ARG NODE_VERSION
+ENV NODE_VERSION ${NODE_VERSION:-14.17.5}
+
+COPY scripts/on_build.sh $METEORD_DIR/on_build.sh
+
+ONBUILD ENV NODE_VERSION ${NODE_VERSION:-14.17.5}
 
 ONBUILD COPY ./ /app
 ONBUILD RUN bash $METEORD_DIR/on_build.sh
