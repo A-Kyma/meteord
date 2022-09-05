@@ -13,5 +13,3 @@ bash $METEORD_DIR/lib/install_imagemagick.sh
 bash $METEORD_DIR/lib/install_wkhtmltopdf.sh
 bash $METEORD_DIR/lib/install_qpdf.sh
 bash $METEORD_DIR/lib/cleanup.sh
-
-useradd meteor
