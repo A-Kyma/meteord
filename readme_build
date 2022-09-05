@@ -1,0 +1,32 @@
+Install docker for mac:
+https://docs.docker.com/desktop/install/mac-install/
+or
+https://github.com/abiosoft/colima :
+brew install colima
+colima start
+
+Then building meteord, in meteord project directory, do :
+docker build base --tag akyma/meteord:node14.19.3bullseye-base
+
+if building from github, do
+docker build https://github.com/A-Kyma/meteord.git#master:base
+
+To check image created:
+docker image ls
+or
+docker images
+
+Add tag if not done during build:
+docker image tag <image_id> akyma/meteord:tag
+
+To remove image:
+docker image rm <image_id>
+
+Then push image:
+docker push akyma/meteord:node14.19.3bullseye-base
+
+If error not logged in: docker login
+If error denied: requested access to the resource is denied : bad name of repository.
+Images should be like that:
+REPOSITORY      TAG                        IMAGE ID       CREATED          SIZE
+akyma/meteord   node14.19.3bullseye-base   cb943a0c94a3   17 minutes ago   834MB
