@@ -28,6 +28,8 @@ docker push akyma/meteord:node14.19.3bullseye-base
 
 If error not logged in: docker login
 If error denied: requested access to the resource is denied : bad name of repository.
+Try docker logout;docker login and/or docker image tag or use docker desktop.
+
 Images should be like that:
 REPOSITORY      TAG                        IMAGE ID       CREATED          SIZE
 akyma/meteord   node14.19.3bullseye-base   cb943a0c94a3   17 minutes ago   834MB
