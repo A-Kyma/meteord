@@ -7,7 +7,7 @@ brew install colima
 colima start
 
 Then building meteord, in meteord project directory, do :
-docker build base --tag akyma/meteord:node14.19.3bullseye-base
+docker build base --network host --tag akyma/meteord:node14.19.3bullseye-base
 
 if building from github, do
 docker build https://github.com/A-Kyma/meteord.git#master:base
