@@ -1,5 +1,6 @@
 Install docker for mac:
 https://docs.docker.com/desktop/install/mac-install/
+then start docker desktop
 or
 https://github.com/abiosoft/colima :
 brew install colima
