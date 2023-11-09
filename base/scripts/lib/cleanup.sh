@@ -3,6 +3,7 @@
 set -e
 # Autoremove any junk
 apt-get autoremove -y
+apt-get clean
 
 # Clean out docs
 rm -rf /usr/share/doc /usr/share/doc-base /usr/share/man /usr/share/locale /usr/share/zoneinfo
@@ -12,6 +13,7 @@ rm -rf /var/lib/cache /var/lib/log
 
 # Clean out /tmp
 rm -rf /tmp/*
+rm -rf /var/tmp/*
 
 # Clear npm cache
 npm cache clear --force
