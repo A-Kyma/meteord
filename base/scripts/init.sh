@@ -9,4 +9,5 @@ bash $METEORD_DIR/lib/install_imagemagick.sh
 bash $METEORD_DIR/lib/install_wkhtmltopdf.sh
 bash $METEORD_DIR/lib/install_qpdf.sh
 bash $METEORD_DIR/lib/install_puppeteer.sh
+bash $METEORD_DIR/lib/install_latex.sh
 bash $METEORD_DIR/lib/cleanup.sh
